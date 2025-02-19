@@ -1,3 +1,5 @@
+**`git push <origin_name> <local_branch>:<remote_branch>`**
+
 Gitee:
 
 ```bash
