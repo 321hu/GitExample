@@ -15,19 +15,20 @@
 
 其对应的本地信息如下：
 
-- `Gitee`：
+```bash
+$ git remote -v
+gitee_origin    git@gitee.com:zihao-huhu/git-example.git (fetch)
+gitee_origin    git@gitee.com:zihao-huhu/git-example.git (push)
+github_origin   git@github.com:321hu/GitExample.git (fetch)
+github_origin   git@github.com:321hu/GitExample.git (push)
+```
 
-  ```bash
-  git remote add gitee_origin https://gitee.com/zihao-huhu/git-example.git
-  git push gitee_origin master:master
-  ```
+进行推送操作：
 
-- `Github`：
-
-  ```bash
-  git remote add github_origin git@github.com:321hu/GitExample.git
-  git push github_origin master:main
-  ```
+```bash
+$ git push github_origin master:main  # 推送到 Github
+$ git push gitee_origin master:master # 推送到 Gitee
+```
 
 ## Git操作文档
 
