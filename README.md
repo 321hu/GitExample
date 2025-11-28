@@ -37,5 +37,5 @@ $ git push gitee_origin master:master # 推送到 Gitee
 - [Git不常用命令](Git-不常用命令.md)
 - [Head与Branch相关知识](Git-head+branch知识.md)
 - 高阶操作：
-  - [本地仓库通过单个SSH连接两个远程仓库](./本地仓库通过单个SSH连接两个远程仓库.md)
-  - [针对Github管理两个SSH Key](./针对Github管理两个SSH Key.md)
+  - [本地仓库通过单个SSH连接两个远程仓库](本地仓库通过单个SSH连接两个远程仓库.md)
+  - [针对Github管理两个SSH Key](针对Github管理两个SSH Key.md)
