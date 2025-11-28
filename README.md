@@ -26,12 +26,15 @@
 
   ```bash
   git remote add github_origin git@github.com:321hu/GitExample.git
-  git push github_origin master:mains
+  git push github_origin master:main
   ```
 
 ## Git操作文档
 
 - [Git常用命令](Git-常用命令.md)
+- [通过SSH连接Github](./通过SSH连接Github.md)
 - [Git不常用命令](Git-不常用命令.md)
 - [Head与Branch相关知识](Git-head+branch知识.md)
-- [使用Git的个人感悟](一些自我感悟.md)
+- 高阶操作：
+  - [本地仓库通过单个SSH连接两个远程仓库](./本地仓库通过单个SSH连接两个远程仓库.md)
+  - [针对Github管理两个SSH Key](./针对Github管理两个SSH Key.md)

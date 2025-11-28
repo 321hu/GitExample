@@ -20,9 +20,7 @@
 
   - ==Note==：同一个平台的不同账号（如Github的两个不同账号）不能使用同一个SSH Key。不同平台之间则无此种顾虑。
 
-    > 我有两个Github账号：321hu（qq）与321fontsize（163），前者使用的SSH Key为`id_rsa`，后者使用的为`id_rsa163`
-
-  - 添加完成之后便可通过SSH进行git push
+  - 添加完成之后便可通过SSH进行git push。
 
 # `.ssh`中的`config`文件
 
@@ -70,49 +68,3 @@ Host github_x
 - 在终端分别输入`ssh -T github.com`与`ssh -T github_x`
   - 不需要输入`git@github.com`与`git@github_x`，因为User已经指定为git
   - 需要分别验证`id_rsa`与`id_rsa163`的密码
-- ==注意==：使用`id_rsa163`的Github账户对应的ssh连接应该全部为`git@github_x:321fontsize/Mkdocs.git`
-
-# 验证SSH
-
-`ssh -T <User>@<Host>`
-
-- **`ssh`**：用于通过 SSH 协议连接到远程服务器。
-- **`-T`**：禁用 TTY 分配，即以非交互模式运行。
-- **`<ssh_usrname>@<Host>`**：指定要连接的远程服务器，`git` 是 GitHub 提供的默认 SSH 用户名，`<Host>` 是自定义的域名（如`github.com` 或 `github_x`）
-
-### 输出结果
-
-#### 1. 成功连接
-
-如果一切配置正确，你会看到类似以下的输出：
-
-```
-Hi username! You've successfully authenticated, but GitHub does not provide shell access.
-```
-
-- **`Hi username!`**：GitHub 会显示你的 GitHub 用户名，确认你已经成功通过 SSH 密钥认证。
-- **`You 've successfully authenticated, but GitHub does not provide shell access.`**：GitHub 不提供交互式 shell 访问，这是正常的。GitHub 的 SSH 服务仅用于 Git 操作，而不是用于登录到一个交互式 shell。
-
-#### 2. 认证失败
-
-如果 SSH 密钥配置有问题，你会看到类似以下的输出：
-
-```
-Permission denied (publickey).
-```
-
-这表示你的 SSH 密钥没有通过认证。可能的原因包括：
-
-- 你的公钥没有正确添加到 GitHub 账户中。
-- 你的私钥文件路径或权限设置不正确。
-- 你使用了错误的 SSH 密钥。
-
-#### 3. 连接超时
-
-如果网络问题导致无法连接到 GitHub，你可能会看到类似以下的输出：
-
-```
-ssh: connect to host github.com port 22: Connection timed out
-```
-
-这表示你的网络连接有问题，或者 GitHub 的服务器暂时无法访问。
